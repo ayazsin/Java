@@ -1,8 +1,8 @@
 package adeneme;
 
-import java.util.Arrays;
+
 import java.util.HashMap;
-import java.util.Map;
+
 import java.util.Scanner;
 
 public class RepeatedWords01 {
@@ -13,7 +13,7 @@ public class RepeatedWords01 {
 		String str= scan.nextLine().toLowerCase();
 		
 		String arr[]=str.split(" ");
-		HashMap<String, Integer> hm = new HashMap();
+		HashMap<String, Integer> hm = new HashMap<String, Integer>();
 		
 		for(String w:arr) {
 			if(!hm.containsKey(w)) {
@@ -26,7 +26,7 @@ public class RepeatedWords01 {
 		}
 		System.out.println(hm);
 		
-		
+		scan.close();
 		
 	}
 

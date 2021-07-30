@@ -18,7 +18,7 @@ public class MethodOverloading01 {
 		/*
 		  As you see in the examples, I created a method to add 2 values and 
 		  I created a different method to add 3 values.
-		  If user wants to add 4 values I need one more method but tjis is not sensible
+		  If user wants to add 4 values I need one more method but this is not sensible
 		  because it is endless.
 		  
 		  For that issue, Java created "varargs", varargs accept any number of values

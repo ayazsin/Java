@@ -12,12 +12,17 @@ public class ReverseNumber {
 		 Scanner scan= new Scanner(System.in);
 	        System.out.println("Please enter a number");
 	        int n = scan.nextInt();
+	        System.out.println(reverseNumber(n));
 	        
-	        while (n>0) {
-	        	System.out.print(n%10);
-	        	n=n/10;
-	        }
 	        scan.close();
 	}
-
+	
+	static int reverseNumber(int n) {
+		while (n>1) {
+        	System.out.print(n%10);
+        	n=n/10;
+		
+	}
+		return n;
+}
 }
