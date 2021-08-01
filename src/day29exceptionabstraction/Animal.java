@@ -16,6 +16,9 @@ public abstract class Animal {
 	 	6)Just concrete child classes must to override "abstract methods", it is not must
 	 	  to override abstract methods for abstract child classes
 	 	7)If an abstract method is overridden by class X, child classes of the class X may or may not override the method 
+	 	8)You cannot create object from abstract classes
+	 	9)Abstract classes are claasses because of that they have constructors, but constructors are not used
+	 	  to create objects, they can be used to initialize variables
 	 */
 
 	

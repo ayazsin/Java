@@ -1,6 +1,6 @@
 package practice04;
 
-import java.util.Scanner;
+
 
 public class ReverseNumber {
 
@@ -9,20 +9,21 @@ public class ReverseNumber {
 		  Write a program to get a number from console and reverse of this number.
          */
 
-		 Scanner scan= new Scanner(System.in);
-	        System.out.println("Please enter a number");
-	        int n = scan.nextInt();
-	        System.out.println(reverseNumber(n));
+		
+	     System.out.println(reverseNumber(123));   
 	        
-	        scan.close();
+	     
 	}
 	
 	static int reverseNumber(int n) {
+		 
 		while (n>1) {
         	System.out.print(n%10);
         	n=n/10;
 		
 	}
+		
 		return n;
+		
 }
 }

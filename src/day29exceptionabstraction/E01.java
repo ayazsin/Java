@@ -10,6 +10,7 @@ public class E01 {
 		//IllegalArgumentException
 		//Sometimes we do not want to use some values for some parameters.
 		
+
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter your age...");
 		int age = scan.nextInt();
