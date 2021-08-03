@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Pangram {
@@ -85,6 +86,7 @@ public class Pangram {
         }
         return al.size() == 26;
     }
+	
     static boolean isPangram2(String str){
         str = str.replace(" ", "").toUpperCase();
         String[] arr = str.split("");
@@ -182,8 +184,7 @@ public class Pangram {
     	return list1;
     }
     
-  //9. Create a method the prints the lowercase alphabet
-    ​
+  //9. Create a method the prints the lowercase alphabet   ​
         static ArrayList<String> alphabet(){
             ArrayList<String> al = new ArrayList<>();
             for(char i = 97; i <= 122; i++){
@@ -192,14 +193,12 @@ public class Pangram {
             }
             return al;
         }
-    ​
-        //Create a method that generates names, Method accepts an int that will set # of names to be stored in the arraylist. It returns an Arraylist
-
-        static ArrayList<String> createNames(int numOfNames){
-    ​
-            ArrayList<String> al = new ArrayList<>();
+        //Create a method that generates names, 
+        //Method accepts an int that will set # of names to be stored in the arraylist. It returns an Arraylist
+        
+        static List <String> createNames(int numOfNames) {
+        	ArrayList<String> al = new ArrayList<>();
             List<String> list = alphabet();
-    ​
             for(int j = 1; j <= numOfNames; j++) {
                 String name = "";
                 int length = new Random().nextInt(25);
@@ -211,37 +210,20 @@ public class Pangram {
             }
             return al;
         }
-    ​
         //Create a method that accepts an arrayList of Strings and return the longest String
 
-        static String findLongest(ArrayList<String> al){
-            String result = "";
-    ​
-            for(String each : al){
+        static String findLongest(List <String> al) {
+        	String result = null;
+			for(String each : al){
                 if(each.length() >= result.length())
                     result = each;
             }
+            
             System.out.println(al);
             return result;
         }
-    ​
-    ​
-        
 
-
-
-
-
-
-
-
-
-
-
-    
-   
-
-
+     
 }
 
 	

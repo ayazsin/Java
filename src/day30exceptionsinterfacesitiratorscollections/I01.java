@@ -5,7 +5,7 @@ package day30exceptionsinterfacesitiratorscollections;
 	 * 2)interface is a storage for abstract method and "public static final variable"
 	 * 3)Normally we can store "abstract methods" and "public static final variables" in an 
 	 *   "abstract class" but abstract does not support multible inheritance. Because of that
-	 *   java created "interface" add interfaces can be used in multible inheritance.
+	 *   java created "interface" and interfaces can be used in multible inheritance.
 	 * 4)interfaces do not have "constructors" because of that we cannot create objects from 
 	 *   interfaces
 	 * 5)All variables in an interface are automatically "pubic", "static", and "final"    
