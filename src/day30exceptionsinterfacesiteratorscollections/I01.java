@@ -1,4 +1,4 @@
-package day30exceptionsinterfacesitiratorscollections;
+package day30exceptionsinterfacesiteratorscollections;
 
 	/*
 	 * 1)interface is not a class, interface is an interface, thats it.

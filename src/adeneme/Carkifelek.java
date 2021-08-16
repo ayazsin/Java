@@ -18,7 +18,7 @@ public class Carkifelek {
 	 1)You have tree lives at the beginnig of the game. If you can't find correct letter
 	   You will loose a live.
 	 2)The points that are likely to come from TWOF are 
-	   {100,200,300,400,500,600,700,800,900,1000,5000,10000,BANKRUPT}; 
+	   {100,200,300,400,500,600,700,800,900,1000,5000,10000,BANKRUPT,PASS}; 
 	 3)The point you get from TWOF should be multiplied by the number of letters you find 
 	 4)If Bankrupt comes, you lose the game straight away.
 	 5)theWordGame("la belle vie"); When we call this method, the game is installed 

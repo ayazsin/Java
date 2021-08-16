@@ -18,6 +18,7 @@ public class closestnumbers {
 		list.add(45);
 		list.add(4);
 		
+		
 		Collections.sort(list);
 		int min = Integer.MAX_VALUE;
 		int dif = 0;

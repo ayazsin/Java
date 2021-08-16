@@ -22,13 +22,13 @@ public class E01 {
 
 	public static void main(String[] args) throws  IOException { //Input Output Exception
 		 
-		FileInputStream fis = new FileInputStream("src/day27exceptions/TextFile01");
+		FileInputStream reader = new FileInputStream("src/day27exceptions/TextFile01");
 		
-		int i = 0;
-		while ((i=fis.read()) != -1) {
-			System.out.print((char)i);
+		int code = 0;
+		while ((code=reader.read()) != -1) {
+			System.out.print((char)code);
 		}
-		fis.close();
+		reader.close();
 
 	}
 

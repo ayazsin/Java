@@ -1,96 +1,97 @@
 package adeneme;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
-
+import java.util.Arrays;
 
 public class Adene {
-	
-	public static void main(String[] args) {
 		
-		System.out.println(romanNumbers(874));
-		System.out.println(fromRomans("LXXIV"));
 		
-		int n1 = Integer.parseInt("123");
-		System.out.println(n1+1);
-		
-	}
-	
-	static String romanNumbers(int a) {
-		String ones [] = {"","I","II","III","IV","V","VI","VII","VIII","IX"};
-		String tens [] = {"","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"};
-		String hundreds [] = {"","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"};
-		ArrayList <Integer> list = new ArrayList<>();
-		int n = 0;
-		String s="";
-		
-		while (a>0) {
-			n= a%10;
-			list.add(n);
-			a=a/10;
-		}
-		
-		if (list.size()==3) {
-			s=hundreds[list.get(2)]+tens[list.get(1)]+ones[list.get(0)];
-		} else if (list.size()==2) {
-			s=tens[list.get(1)]+ones[list.get(0)];
-		} else if (list.size()==1) {
-			s=ones[list.get(0)];
-		}		
-	
-		return s;
-				
-	}
-	
-	static int fromRomans(String s) {
-		int h=0;
-		int t=0;
-		int o=0;
-		String f="";
-		
-		String ones [] = {"","I","II","III","IV","V","VI","VII","VIII","IX"};
-		String tens [] = {"","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"};
-		String hundreds [] = {"","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"};
-		
-		for (int i=0; i<10; i++) {
-			if (i==5 && h==4) {
-				continue;
-			}
-			if (s.startsWith(hundreds[i])) {
-				h=i;
-				f=hundreds[i];
-			}
-		}
-		s=s.replaceFirst(f, "");
-		
-		for (int i=0; i<10; i++) {
-			if (i==5 && o==4) {
-				continue;
-			}
-			if (s.endsWith(ones[i])) {
-				o=i;
-				f=ones[i];
-			}
-		}
-		s=s.replaceFirst(f, "");
-		
-		for (int i=0; i<10; i++) {
-			if (i==5 && t==4) {
-				continue;
-			}
-			if (s.contains(tens[i])) {
-				t=i;
-				f=tens[i];	
-			}
-		}
-		s=s.replaceFirst(f, "");
+	// Java program to create a tree with left child
+	// right sibling representation.
+	 
 	     
-		return h*100+t*10+o;
+	    static class NodeTemp
+	    {
+	        int data;
+	        NodeTemp next, child;
+	        public NodeTemp(int data)
+	        {
+	            this.data = data;
+	            next = child = null;
+	        }
+	    }
+	     
+	    // Adds a sibling to a list with starting with n
+	    static public NodeTemp addSibling(NodeTemp node, int data)
+	    {
+	        if(node == null)
+	            return null;
+	        while(node.next != null)
+	            node = node.next;
+	        return(node.next = new NodeTemp(data));
+	    }
+	         
+	    // Add child Node to a Node
+	    static public NodeTemp addChild(NodeTemp node,int data)
+	    {
+	        if(node == null)
+	            return null;
+	     
+	        // Check if child is not empty.
+	        if(node.child != null)
+	            return(addSibling(node.child,data));
+	        else
+	            return(node.child = new NodeTemp(data));
+	    }
+	 
+	    // Traverses tree in depth first order
+	    static public void traverseTree(NodeTemp root)
+	    {
+	        if(root == null)
+	            return;
+	        while(root != null)
+	        {
+	            System.out.print(root.data + " ");
+	            if(root.child != null)
+	                traverseTree(root.child);
+	            root = root.next;
+	        }
+	    }
+	 
+	    // Driver code
+	    public static void main(String args[])
+	    {
+	         
+	        /*   Let us create below tree
+	        *           10
+	        *     /   /    \   \
+	        *    2  3      4   5
+	        *              |   /  | \
+	        *              6   7  8  9   */
+	      
+	        // Left child right sibling
+	        /*  10
+	        *    |
+	        *    2 -> 3 -> 4 -> 5
+	        *              |    |
+	        *              6    7 -> 8 -> 9  */
+	 
+	        NodeTemp root = new NodeTemp(10);
+	        NodeTemp n1 = addChild(root,2);
+	        NodeTemp n2 = addChild(root,3);
+	        NodeTemp n3 = addChild(root,4);
+	        NodeTemp n4 = addChild(n3,6);
+	        NodeTemp n5 = addChild(root,5);
+	        NodeTemp n6 = addChild(n5,7);
+	        NodeTemp n7 = addChild(n5,8);
+	        NodeTemp n8 = addChild(n5,9);
+	         
+	        traverseTree(root);
+	        
+	    }
 	}
-				
-}
+	 
+	// This code is contributed by M.V.S.Surya Teja.
 		
-
-
+		
+	
+		

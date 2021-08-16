@@ -1,4 +1,4 @@
-package day30exceptionsinterfacesitiratorscollections;
+package day30exceptionsinterfacesiteratorscollections;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package day30exceptionsinterfacesitiratorscollections;
+package day30exceptionsinterfacesiteratorscollections;
 
 public class RunnerDay30 {
 

@@ -1,4 +1,4 @@
-package day30exceptionsinterfacesitiratorscollections;
+package day30exceptionsinterfacesiteratorscollections;
 
 /*
  	1)To make a concrete class child of an interface use "implements" keyword not "extends"

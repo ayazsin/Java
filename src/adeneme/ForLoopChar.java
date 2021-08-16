@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class ForLoopChar {
 	
-
-
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a letter");
 		char ch=scan.nextLine().toUpperCase().charAt(0);
 		
 		for (char i='A'; i<=ch; i++) {
